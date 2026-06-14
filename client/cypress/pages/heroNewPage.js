@@ -29,6 +29,10 @@ export default class HeroNewPage {
         });
     }
 
+    uploadAvatar(filePath) {
+        cy.get(this.selectorsList().avatarFile).selectFile(filePath, { force: true });
+    }
+
     submitHeroForm() {
         cy.contains('button', 'Submit').click();
     }

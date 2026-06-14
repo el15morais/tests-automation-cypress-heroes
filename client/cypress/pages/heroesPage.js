@@ -21,4 +21,8 @@ export default class HeroesPage {
     getFirstHeroCard() {
         return this.getHeroCards().first();
     }
+
+    getHeroCardByName(name) {
+        return cy.contains(this.selectorsList().heroName, name).closest(this.selectorsList().heroCard);
+    }
 }
