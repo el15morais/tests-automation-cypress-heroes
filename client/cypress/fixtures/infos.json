@@ -6,5 +6,9 @@
     "invalidUser": {
         "email": "admin@test.com",
         "password": "testinvalid"
+    },
+    "commonUser": {
+        "email": "test@test.com",
+        "password": "test123"
     }
 }
