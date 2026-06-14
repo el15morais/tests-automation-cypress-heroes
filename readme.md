@@ -56,3 +56,51 @@ npm run resetdb
 The client app uses an environment variable to know what the URL is for the
 backend api named `VITE_API_URL`. It defaults to "http://localhost:3001" for use
 in dev mode, and should be overriden in other environments/modes.
+
+## Running Tests
+
+The Cypress tests for this project are stored under `client/cypress`.
+
+- `client/cypress/e2e/` contains the end-to-end specs.
+- `client/cypress/pages/` contains page objects used by the tests.
+- `client/cypress/docs/` contains test case documentation and bug reports.
+
+### Setup
+
+1. Install dependencies at the root:
+
+```sh
+npm install
+```
+
+2. Run the setup script to prepare the database and environment:
+
+```sh
+npm run setup
+```
+
+3. Start the app in development mode:
+
+```sh
+npm run dev
+```
+
+The client should be available at `http://localhost:3000` and the API at `http://localhost:3001`.
+
+### Run Cypress tests
+
+From the repository root, open Cypress with:
+
+```sh
+npx cypress open
+```
+
+Then choose the E2E spec file from the UI.
+
+To run the tests in headless mode, use:
+
+```sh
+npx cypress run --config-file client/cypress.config.js
+```
+
+If the test configuration uses a custom Cypress file inside `client/`, replace the path accordingly.
